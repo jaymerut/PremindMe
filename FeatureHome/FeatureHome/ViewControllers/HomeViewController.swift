@@ -6,14 +6,30 @@
 //
 
 import UIKit
-
+import SnapKit
+import IGListKit
 
 public class HomeViewController: UIViewController {
     
     
     // MARK: - Variables
+    private lazy var sections: [Any] = [Any]()
     
-    
+    private lazy var adapter: ListAdapter = {
+        let adapter = ListAdapter(updater: ListAdapterUpdater.init(), viewController: self, workingRangeSize: 0)
+        
+        return adapter
+    }()
+    private lazy var collectionView: UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout.init()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collectionView.backgroundColor = .white
+        collectionView.alwaysBounceVertical = true
+        collectionView.contentInset = .init(top: 10, left: 0, bottom: 10, right: 0)
+        
+        return collectionView
+    }()
+
     
     // MARK: - Initialization
     private func customInitHomeViewController() {
@@ -45,6 +61,8 @@ public class HomeViewController: UIViewController {
         
         // Setup
         setupHomeViewController()
+        
+        self.sections = self.createSectionObjects()
     }
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -60,15 +78,54 @@ public class HomeViewController: UIViewController {
     // MARK: - Private API
     private func setupHomeViewController() {
         
-        // Self
+        // Adapter
+        self.adapter.collectionView = self.collectionView
+        self.adapter.dataSource = self
         
-        
+        // CollectionView
+        self.view.addSubview(self.collectionView)
+        self.collectionView.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
     }
     
-    
+    private func createSectionObjects() -> [Any] {
+        var array = [Any]()
+        
+        array.append(Header.init(title: "Header"))
+        
+        return array
+    }
+
     
     // MARK: - Public API
     
     
     
+}
+
+extension HomeViewController: ListAdapterDataSource {
+
+    public func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        self.sections as! [ListDiffable]
+    }
+    
+    public func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        
+        if object is Header {
+            return HeaderSectionController()
+        }
+        
+        return ListSectionController.init()
+    }
+    
+    public func emptyView(for listAdapter: ListAdapter) -> UIView? {
+        
+        let label = UILabel.init(frame: .zero)
+        label.text = ""
+        label.textAlignment = .center
+        
+        return label
+    }
+
 }

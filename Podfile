@@ -14,6 +14,7 @@ def feature_home_pods
 end
 
 def application_pods
+  pod 'IGListKit'
   core_pods
 end
 
