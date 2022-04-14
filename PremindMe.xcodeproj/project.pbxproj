@@ -17,6 +17,7 @@
 		969056552807BBAA00E5A1E7 /* PremindMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969056542807BBAA00E5A1E7 /* PremindMeTests.swift */; };
 		9690565F2807BBAA00E5A1E7 /* PremindMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9690565E2807BBAA00E5A1E7 /* PremindMeUITests.swift */; };
 		969056612807BBAA00E5A1E7 /* PremindMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969056602807BBAA00E5A1E7 /* PremindMeUITestsLaunchTests.swift */; };
+		969056CB2807C3C700E5A1E7 /* Core.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 969056C72807C38400E5A1E7 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		97656D09048B22C4AB010BA4 /* Pods_PremindMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360576A1F15B63284A16393D /* Pods_PremindMeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +36,35 @@
 			remoteGlobalIDString = 969056392807BBA600E5A1E7;
 			remoteInfo = PremindMe;
 		};
+		969056C62807C38400E5A1E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 969056C12807C38400E5A1E7 /* Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 969056A62807C1E600E5A1E7;
+			remoteInfo = Core;
+		};
+		969056C82807C38400E5A1E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 969056C12807C38400E5A1E7 /* Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 969056B02807C1E700E5A1E7;
+			remoteInfo = CoreTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		969056CA2807C3AC00E5A1E7 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				969056CB2807C3C700E5A1E7 /* Core.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		360576A1F15B63284A16393D /* Pods_PremindMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PremindMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +83,7 @@
 		9690565A2807BBAA00E5A1E7 /* PremindMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PremindMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9690565E2807BBAA00E5A1E7 /* PremindMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremindMeUITests.swift; sourceTree = "<group>"; };
 		969056602807BBAA00E5A1E7 /* PremindMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremindMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		969056C12807C38400E5A1E7 /* Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Core.xcodeproj; path = Core/Core.xcodeproj; sourceTree = SOURCE_ROOT; };
 		A0CC801B47F38A2BC3BBE319 /* Pods-PremindMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PremindMe.debug.xcconfig"; path = "Target Support Files/Pods-PremindMe/Pods-PremindMe.debug.xcconfig"; sourceTree = "<group>"; };
 		BDFFC69965C9E1016FC79F69 /* Pods-PremindMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PremindMeTests.debug.xcconfig"; path = "Target Support Files/Pods-PremindMeTests/Pods-PremindMeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C20A13C8EC94418B9C31E71C /* Pods-PremindMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PremindMe.release.xcconfig"; path = "Target Support Files/Pods-PremindMe/Pods-PremindMe.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +122,7 @@
 		969056312807BBA600E5A1E7 = {
 			isa = PBXGroup;
 			children = (
+				969056C02807C34800E5A1E7 /* Dependencies */,
 				9690563C2807BBA600E5A1E7 /* PremindMe */,
 				969056532807BBAA00E5A1E7 /* PremindMeTests */,
 				9690565D2807BBAA00E5A1E7 /* PremindMeUITests */,
@@ -157,6 +188,23 @@
 			path = ApplicationDelegates;
 			sourceTree = "<group>";
 		};
+		969056C02807C34800E5A1E7 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				969056C12807C38400E5A1E7 /* Core.xcodeproj */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		969056C22807C38400E5A1E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				969056C72807C38400E5A1E7 /* Core.framework */,
+				969056C92807C38400E5A1E7 /* CoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A6E0BF0119D60961676F0547 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +225,6 @@
 				BDFFC69965C9E1016FC79F69 /* Pods-PremindMeTests.debug.xcconfig */,
 				6C60D0799C8B7824FE32F60C /* Pods-PremindMeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -193,6 +240,7 @@
 				969056372807BBA600E5A1E7 /* Frameworks */,
 				969056382807BBA600E5A1E7 /* Resources */,
 				EFC2A031A90A4AE8C9528A4A /* [CP] Embed Pods Frameworks */,
+				969056CA2807C3AC00E5A1E7 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,6 +324,12 @@
 			mainGroup = 969056312807BBA600E5A1E7;
 			productRefGroup = 9690563B2807BBA600E5A1E7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 969056C22807C38400E5A1E7 /* Products */;
+					ProjectRef = 969056C12807C38400E5A1E7 /* Core.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				969056392807BBA600E5A1E7 /* PremindMe */,
@@ -284,6 +338,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		969056C72807C38400E5A1E7 /* Core.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Core.framework;
+			remoteRef = 969056C62807C38400E5A1E7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		969056C92807C38400E5A1E7 /* CoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CoreTests.xctest;
+			remoteRef = 969056C82807C38400E5A1E7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		969056382807BBA600E5A1E7 /* Resources */ = {
