@@ -11,6 +11,7 @@
 		969057132807C5AF00E5A1E7 /* FeatureHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969057082807C5AF00E5A1E7 /* FeatureHome.framework */; };
 		969057182807C5AF00E5A1E7 /* FeatureHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969057172807C5AF00E5A1E7 /* FeatureHomeTests.swift */; };
 		969057192807C5AF00E5A1E7 /* FeatureHome.h in Headers */ = {isa = PBXBuildFile; fileRef = 9690570B2807C5AF00E5A1E7 /* FeatureHome.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		969057302807C73500E5A1E7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9690572F2807C73500E5A1E7 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		9690570C2807C5AF00E5A1E7 /* FeatureHome.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FeatureHome.docc; sourceTree = "<group>"; };
 		969057122807C5AF00E5A1E7 /* FeatureHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeatureHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		969057172807C5AF00E5A1E7 /* FeatureHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureHomeTests.swift; sourceTree = "<group>"; };
+		9690572F2807C73500E5A1E7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		9690570A2807C5AF00E5A1E7 /* FeatureHome */ = {
 			isa = PBXGroup;
 			children = (
+				9690572E2807C72300E5A1E7 /* ViewControllers */,
 				9690570B2807C5AF00E5A1E7 /* FeatureHome.h */,
 				9690570C2807C5AF00E5A1E7 /* FeatureHome.docc */,
 			);
@@ -83,6 +86,14 @@
 				969057172807C5AF00E5A1E7 /* FeatureHomeTests.swift */,
 			);
 			path = FeatureHomeTests;
+			sourceTree = "<group>";
+		};
+		9690572E2807C72300E5A1E7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9690572F2807C73500E5A1E7 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9690570D2807C5AF00E5A1E7 /* FeatureHome.docc in Sources */,
+				969057302807C73500E5A1E7 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +408,7 @@
 		969057202807C5AF00E5A1E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BT4J67MR3F;
@@ -412,6 +425,7 @@
 		969057212807C5AF00E5A1E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BT4J67MR3F;
