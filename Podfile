@@ -9,6 +9,7 @@ def core_pods
 end
 
 def feature_home_pods
+  pod 'IGListKit'
   core_pods
 end
 
@@ -23,7 +24,7 @@ end
 
 target 'FeatureHome' do
   project 'FeatureHome/FeatureHome.project'
-  core_pods
+  feature_home_pods
 end
 
 target 'PremindMe' do
