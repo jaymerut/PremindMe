@@ -8,11 +8,19 @@ def core_pods
   pod 'SnapKit'
 end
 
+def feature_home_pods
+  core_pods
+end
+
 def application_pods
   core_pods
 end
 
-target 'Core do
+target 'Core' do
+  core_pods
+end
+
+target 'FeatureHome' do
   core_pods
 end
 
