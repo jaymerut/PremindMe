@@ -17,16 +17,17 @@ def application_pods
 end
 
 target 'Core' do
+  project 'Core/Core.project'
   core_pods
 end
 
 target 'FeatureHome' do
+  project 'FeatureHome/FeatureHome.project'
   core_pods
 end
 
 target 'PremindMe' do
   # Comment the next line if you don't want to use dynamic frameworks
-
   application_pods
   
   target 'PremindMeTests' do
