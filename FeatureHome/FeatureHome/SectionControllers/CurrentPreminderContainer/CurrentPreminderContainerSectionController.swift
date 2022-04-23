@@ -40,7 +40,7 @@ class CurrentPreminderContainerSectionController: ListSectionController {
     }
 
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: collectionContext!.containerSize.width, height: CGFloat(self.model.currentPreminders.count * 55))
+        return CGSize(width: collectionContext!.containerSize.width, height: CGFloat(50 + self.model.currentPreminders.count * 55))
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {
