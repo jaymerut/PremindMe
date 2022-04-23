@@ -8,17 +8,28 @@ def core_pods
   pod 'SnapKit'
 end
 
-def application_pods
+def feature_home_pods
+  pod 'IGListKit'
   core_pods
 end
 
-target 'Core do
+def application_pods
+  pod 'IGListKit'
   core_pods
+end
+
+target 'Core' do
+  project 'Core/Core.project'
+  core_pods
+end
+
+target 'FeatureHome' do
+  project 'FeatureHome/FeatureHome.project'
+  feature_home_pods
 end
 
 target 'PremindMe' do
   # Comment the next line if you don't want to use dynamic frameworks
-
   application_pods
   
   target 'PremindMeTests' do
