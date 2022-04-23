@@ -45,8 +45,8 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
         
         self.contentView.addSubview(self.labelTitle)
         self.labelTitle.snp.makeConstraints { make in
-            make.top.equalTo(self.contentView.snp.top).offset(10)
             make.centerX.equalTo(self.contentView.snp.centerX)
+            make.centerY.equalTo(self.contentView.snp.centerY)
         }
         
         

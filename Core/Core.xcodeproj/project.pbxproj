@@ -12,6 +12,7 @@
 		969056B12807C1E700E5A1E7 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969056A62807C1E600E5A1E7 /* Core.framework */; };
 		969056B62807C1E700E5A1E7 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969056B52807C1E700E5A1E7 /* CoreTests.swift */; };
 		969056B72807C1E700E5A1E7 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 969056A92807C1E600E5A1E7 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96DAA47D2813B1270096B740 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA47C2813B1270096B740 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		969056AA2807C1E600E5A1E7 /* Core.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Core.docc; sourceTree = "<group>"; };
 		969056B02807C1E700E5A1E7 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		969056B52807C1E700E5A1E7 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
+		96DAA47C2813B1270096B740 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9F732D113DDE9CD2E19C258D /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 		969056A82807C1E600E5A1E7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				96DAA47B2813B0FA0096B740 /* Extensions */,
 				969056A92807C1E600E5A1E7 /* Core.h */,
 				969056AA2807C1E600E5A1E7 /* Core.docc */,
 			);
@@ -100,6 +103,14 @@
 				969056B52807C1E700E5A1E7 /* CoreTests.swift */,
 			);
 			path = CoreTests;
+			sourceTree = "<group>";
+		};
+		96DAA47B2813B0FA0096B740 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				96DAA47C2813B1270096B740 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BA74AC675C8D0B225FF0D1FA /* Frameworks */ = {
@@ -246,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				969056AB2807C1E600E5A1E7 /* Core.docc in Sources */,
+				96DAA47D2813B1270096B740 /* UIColor+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +461,7 @@
 		969056BE2807C1E700E5A1E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BT4J67MR3F;
@@ -465,6 +478,7 @@
 		969056BF2807C1E700E5A1E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BT4J67MR3F;

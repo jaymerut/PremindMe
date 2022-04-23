@@ -18,6 +18,7 @@
 		96DAA47028139FC50096B740 /* CurrentPreminderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA46F28139FC50096B740 /* CurrentPreminderCollectionViewCell.swift */; };
 		96DAA4782813A79F0096B740 /* CurrentPreminderContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA4772813A79F0096B740 /* CurrentPreminderContainerCollectionViewCell.swift */; };
 		96DAA47A2813A7B90096B740 /* CurrentPreminderContainerSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA4792813A7B90096B740 /* CurrentPreminderContainerSectionController.swift */; };
+		96DAA48A2813B43B0096B740 /* Core.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 96DAA4862813B1E30096B740 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B37F6967A846E3C4206B2342 /* Pods_FeatureHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696189F87762B5DC9A30EB20 /* Pods_FeatureHome.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +30,35 @@
 			remoteGlobalIDString = 969057072807C5AF00E5A1E7;
 			remoteInfo = FeatureHome;
 		};
+		96DAA4852813B1E30096B740 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96DAA4802813B1E30096B740 /* Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 969056A62807C1E600E5A1E7;
+			remoteInfo = Core;
+		};
+		96DAA4872813B1E30096B740 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96DAA4802813B1E30096B740 /* Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 969056B02807C1E700E5A1E7;
+			remoteInfo = CoreTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		96DAA47E2813B1910096B740 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				96DAA48A2813B43B0096B740 /* Core.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1095739C316A4BC8BBED2178 /* Pods-FeatureHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeatureHome.debug.xcconfig"; path = "Target Support Files/Pods-FeatureHome/Pods-FeatureHome.debug.xcconfig"; sourceTree = "<group>"; };
@@ -46,6 +75,7 @@
 		96DAA46F28139FC50096B740 /* CurrentPreminderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPreminderCollectionViewCell.swift; sourceTree = "<group>"; };
 		96DAA4772813A79F0096B740 /* CurrentPreminderContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPreminderContainerCollectionViewCell.swift; sourceTree = "<group>"; };
 		96DAA4792813A7B90096B740 /* CurrentPreminderContainerSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPreminderContainerSectionController.swift; sourceTree = "<group>"; };
+		96DAA4802813B1E30096B740 /* Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Core.xcodeproj; path = ../../../Core/Core.xcodeproj; sourceTree = "<group>"; };
 		D118AE96E05BB7AAA1A85E39 /* Pods-FeatureHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeatureHome.release.xcconfig"; path = "Target Support Files/Pods-FeatureHome/Pods-FeatureHome.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +140,7 @@
 		9690570A2807C5AF00E5A1E7 /* FeatureHome */ = {
 			isa = PBXGroup;
 			children = (
+				96DAA47F2813B1D50096B740 /* Dependencies */,
 				9690573F2807D47D00E5A1E7 /* CollectionViewCells */,
 				9690573E2807D47000E5A1E7 /* SectionControllers */,
 				9690572E2807C72300E5A1E7 /* ViewControllers */,
@@ -203,6 +234,23 @@
 			path = CurrentPreminderContainer;
 			sourceTree = "<group>";
 		};
+		96DAA47F2813B1D50096B740 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				96DAA4802813B1E30096B740 /* Core.xcodeproj */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		96DAA4812813B1E30096B740 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96DAA4862813B1E30096B740 /* Core.framework */,
+				96DAA4882813B1E30096B740 /* CoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -226,6 +274,7 @@
 				969057042807C5AF00E5A1E7 /* Sources */,
 				969057052807C5AF00E5A1E7 /* Frameworks */,
 				969057062807C5AF00E5A1E7 /* Resources */,
+				96DAA47E2813B1910096B740 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +332,12 @@
 			mainGroup = 969056FE2807C5AF00E5A1E7;
 			productRefGroup = 969057092807C5AF00E5A1E7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 96DAA4812813B1E30096B740 /* Products */;
+					ProjectRef = 96DAA4802813B1E30096B740 /* Core.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				969057072807C5AF00E5A1E7 /* FeatureHome */,
@@ -290,6 +345,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		96DAA4862813B1E30096B740 /* Core.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Core.framework;
+			remoteRef = 96DAA4852813B1E30096B740 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		96DAA4882813B1E30096B740 /* CoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CoreTests.xctest;
+			remoteRef = 96DAA4872813B1E30096B740 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		969057062807C5AF00E5A1E7 /* Resources */ = {
