@@ -63,6 +63,9 @@ public class HomeViewController: UIViewController {
         setupHomeViewController()
         
         self.sections = self.createSectionObjects()
+        
+        self.adapter.performUpdates(animated: true, completion: nil)
+        self.adapter.reloadData()
     }
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -92,7 +95,7 @@ public class HomeViewController: UIViewController {
     private func createSectionObjects() -> [Any] {
         var array = [Any]()
         
-        array.append(Header.init(title: "Header"))
+        array.append(CurrentPreminder.init(title: "Remind Me Now!!"))
         
         return array
     }
@@ -114,6 +117,8 @@ extension HomeViewController: ListAdapterDataSource {
         
         if object is Header {
             return HeaderSectionController()
+        } else if object is CurrentPreminder {
+            return CurrentPremindersSectionController()
         }
         
         return ListSectionController.init()
