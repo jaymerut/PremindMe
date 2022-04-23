@@ -1,5 +1,5 @@
 //
-//  CurrentPremindersSectionController.swift
+//  CurrentPreminderSectionController.swift
 //  FeatureHome
 //
 //  Created by Jayme Rutkoski on 4/22/22.
@@ -9,7 +9,7 @@ import UIKit
 import IGListKit
 import IGListDiffKit
 
-class CurrentPremindersSectionController: ListSectionController {
+class CurrentPreminderSectionController: ListSectionController {
     
     
     // MARK: - Variables
@@ -17,13 +17,13 @@ class CurrentPremindersSectionController: ListSectionController {
     
     
     // MARK: - Initialization
-    private func customInitCurrentPremindersSectionController() {
+    private func customInitCurrentPreminderSectionController() {
         
     }
     override init() {
         super.init()
         
-        customInitCurrentPremindersSectionController()
+        customInitCurrentPreminderSectionController()
     }
     
     

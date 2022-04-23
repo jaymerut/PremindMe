@@ -94,8 +94,9 @@ public class HomeViewController: UIViewController {
     
     private func createSectionObjects() -> [Any] {
         var array = [Any]()
+        let currentPreminders = [CurrentPreminder.init(title: "Remind Me Now 1!!"), CurrentPreminder.init(title: "Remind Me Now 2!!")]
         
-        array.append(CurrentPreminder.init(title: "Remind Me Now!!"))
+        array.append(CurrentPreminderContainer.init(currentPreminders: currentPreminders))
         
         return array
     }
@@ -117,8 +118,8 @@ extension HomeViewController: ListAdapterDataSource {
         
         if object is Header {
             return HeaderSectionController()
-        } else if object is CurrentPreminder {
-            return CurrentPremindersSectionController()
+        } else if object is CurrentPreminderContainer {
+            return CurrentPreminderContainerSectionController()
         }
         
         return ListSectionController.init()
