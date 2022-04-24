@@ -1,5 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-PremindMe-PremindMeUITests/Pods-PremindMe-PremindMeUITests-frameworks.sh
-${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
 ${BUILT_PRODUCTS_DIR}/IGListDiffKit/IGListDiffKit.framework
 ${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework

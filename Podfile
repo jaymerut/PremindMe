@@ -6,8 +6,6 @@ workspace 'PremindMe'
 
 def core_pods
   pod 'SnapKit'
-  pod 'R.swift'
-  pod 'Sourcery'
 end
 
 def feature_home_pods
