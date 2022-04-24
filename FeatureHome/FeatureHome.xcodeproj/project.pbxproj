@@ -19,6 +19,8 @@
 		96DAA4782813A79F0096B740 /* CurrentPreminderContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA4772813A79F0096B740 /* CurrentPreminderContainerCollectionViewCell.swift */; };
 		96DAA47A2813A7B90096B740 /* CurrentPreminderContainerSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA4792813A7B90096B740 /* CurrentPreminderContainerSectionController.swift */; };
 		96DAA48A2813B43B0096B740 /* Core.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 96DAA4862813B1E30096B740 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		96DAA4902814F32F0096B740 /* CreatePreminderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA48F2814F32F0096B740 /* CreatePreminderSectionController.swift */; };
+		96DAA4932814F3D00096B740 /* CreatePreminderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA4922814F3D00096B740 /* CreatePreminderCollectionViewCell.swift */; };
 		B37F6967A846E3C4206B2342 /* Pods_FeatureHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696189F87762B5DC9A30EB20 /* Pods_FeatureHome.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		96DAA4772813A79F0096B740 /* CurrentPreminderContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPreminderContainerCollectionViewCell.swift; sourceTree = "<group>"; };
 		96DAA4792813A7B90096B740 /* CurrentPreminderContainerSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPreminderContainerSectionController.swift; sourceTree = "<group>"; };
 		96DAA4802813B1E30096B740 /* Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Core.xcodeproj; path = ../../../Core/Core.xcodeproj; sourceTree = "<group>"; };
+		96DAA48F2814F32F0096B740 /* CreatePreminderSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePreminderSectionController.swift; sourceTree = "<group>"; };
+		96DAA4922814F3D00096B740 /* CreatePreminderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePreminderCollectionViewCell.swift; sourceTree = "<group>"; };
 		D118AE96E05BB7AAA1A85E39 /* Pods-FeatureHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeatureHome.release.xcconfig"; path = "Target Support Files/Pods-FeatureHome/Pods-FeatureHome.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +173,7 @@
 		9690573E2807D47000E5A1E7 /* SectionControllers */ = {
 			isa = PBXGroup;
 			children = (
+				96DAA48C2814F3150096B740 /* CreatePreminder */,
 				96DAA4752813A7770096B740 /* CurrentPreminderContainer */,
 				96DAA46B28139F6B0096B740 /* CurrentPreminder */,
 				969057422807D57400E5A1E7 /* Header */,
@@ -179,6 +184,7 @@
 		9690573F2807D47D00E5A1E7 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				96DAA4912814F3BD0096B740 /* CreatePreminder */,
 				96DAA4762813A7800096B740 /* CurrentPreminderContainer */,
 				96DAA46E28139FA30096B740 /* CurrentPreminder */,
 				969057432807D57F00E5A1E7 /* Header */,
@@ -249,6 +255,22 @@
 				96DAA4882813B1E30096B740 /* CoreTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		96DAA48C2814F3150096B740 /* CreatePreminder */ = {
+			isa = PBXGroup;
+			children = (
+				96DAA48F2814F32F0096B740 /* CreatePreminderSectionController.swift */,
+			);
+			path = CreatePreminder;
+			sourceTree = "<group>";
+		};
+		96DAA4912814F3BD0096B740 /* CreatePreminder */ = {
+			isa = PBXGroup;
+			children = (
+				96DAA4922814F3D00096B740 /* CreatePreminderCollectionViewCell.swift */,
+			);
+			path = CreatePreminder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,8 +436,10 @@
 				969057412807D4EB00E5A1E7 /* HeaderSectionController.swift in Sources */,
 				96DAA47028139FC50096B740 /* CurrentPreminderCollectionViewCell.swift in Sources */,
 				969057452807D59300E5A1E7 /* HeaderCollectionViewCell.swift in Sources */,
+				96DAA4902814F32F0096B740 /* CreatePreminderSectionController.swift in Sources */,
 				9690570D2807C5AF00E5A1E7 /* FeatureHome.docc in Sources */,
 				969057302807C73500E5A1E7 /* HomeViewController.swift in Sources */,
+				96DAA4932814F3D00096B740 /* CreatePreminderCollectionViewCell.swift in Sources */,
 				96DAA46D28139F9D0096B740 /* CurrentPremindersSectionController.swift in Sources */,
 				96DAA4782813A79F0096B740 /* CurrentPreminderContainerCollectionViewCell.swift in Sources */,
 			);
