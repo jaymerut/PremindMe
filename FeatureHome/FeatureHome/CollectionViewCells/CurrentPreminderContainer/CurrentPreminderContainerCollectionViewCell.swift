@@ -70,8 +70,8 @@ class CurrentPreminderContainerCollectionViewCell: UICollectionViewCell {
         self.contentView.addSubview(self.viewHeader)
         self.viewHeader.snp.makeConstraints { make in
             make.top.equalTo(self.contentView.snp.top)
-            make.left.equalTo(self.contentView.snp.left).offset(20)
-            make.right.equalTo(self.contentView.snp.right).inset(20)
+            make.left.equalTo(self.contentView.snp.left)
+            make.right.equalTo(self.contentView.snp.right)
             make.height.equalTo(50)
         }
         
@@ -87,8 +87,8 @@ class CurrentPreminderContainerCollectionViewCell: UICollectionViewCell {
         self.contentView.addSubview(self.collectionView)
         self.collectionView.snp.makeConstraints { (make) in
             make.top.equalTo(self.viewHeader.snp.bottom)
-            make.left.equalTo(self.contentView.snp.left).offset(20)
-            make.right.equalTo(self.contentView.snp.right).inset(20)
+            make.left.equalTo(self.contentView.snp.left)
+            make.right.equalTo(self.contentView.snp.right)
             make.bottom.equalTo(self.contentView.snp.bottom)
         }
         

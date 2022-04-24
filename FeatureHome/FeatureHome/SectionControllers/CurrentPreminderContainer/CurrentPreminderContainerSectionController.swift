@@ -40,7 +40,7 @@ class CurrentPreminderContainerSectionController: ListSectionController {
     }
 
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: collectionContext!.containerSize.width, height: CGFloat(50 + self.model.currentPreminders.count * 55))
+        return CGSize(width: collectionContext!.containerSize.width, height: CGFloat(50 + (self.model.currentPreminders.count > 0 ? self.model.currentPreminders.count * 55 : 55)))
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {
@@ -80,8 +80,9 @@ extension CurrentPreminderContainerSectionController: ListAdapterDataSource {
     public func emptyView(for listAdapter: ListAdapter) -> UIView? {
         
         let label = UILabel.init(frame: .zero)
-        label.text = ""
+        label.text = "No Preminders Set"
         label.textAlignment = .center
+        label.font = UIFont.italicSystemFont(ofSize: 16.0)
         
         return label
     }
@@ -95,7 +96,7 @@ class CurrentPreminderContainer: NSObject, ListDiffable {
     override init() {
         super.init()
     }
-    @objc init(currentPreminders: [CurrentPreminder]) {
+    init(currentPreminders: [CurrentPreminder]) {
         super.init()
         
         self.currentPreminders = currentPreminders

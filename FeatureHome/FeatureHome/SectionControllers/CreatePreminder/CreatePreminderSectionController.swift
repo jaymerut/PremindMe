@@ -1,29 +1,30 @@
 //
-//  CurrentPreminderSectionController.swift
+//  CreatePreminderSectionController.swift
 //  FeatureHome
 //
-//  Created by Jayme Rutkoski on 4/22/22.
+//  Created by Jayme Rutkoski on 4/23/22.
 //
 
 import UIKit
 import IGListKit
 import IGListDiffKit
 
-class CurrentPreminderSectionController: ListSectionController {
+
+class CreatePreminderSectionController: ListSectionController {
     
     
     // MARK: - Variables
-    private var model: CurrentPreminder = CurrentPreminder();
+    private var model: CreatePreminder = CreatePreminder()
     
     
     // MARK: - Initialization
-    private func customInitCurrentPreminderSectionController() {
+    private func customInitCreatePreminderSectionController() {
         
     }
     override init() {
         super.init()
         
-        customInitCurrentPreminderSectionController()
+        customInitCreatePreminderSectionController()
     }
     
     
@@ -34,19 +35,17 @@ class CurrentPreminderSectionController: ListSectionController {
     }
 
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: collectionContext!.containerSize.width, height: 55)
+        return CGSize(width: collectionContext!.containerSize.width, height: 75)
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        let cell: CurrentPreminderCollectionViewCell = collectionContext?.dequeueReusableCell(of: CurrentPreminderCollectionViewCell.self, for: self, at: index) as! CurrentPreminderCollectionViewCell
-        
-        cell.updateCell(model: self.model)
-        
+        let cell: CreatePreminderCollectionViewCell = collectionContext?.dequeueReusableCell(of: CreatePreminderCollectionViewCell.self, for: self, at: index) as! CreatePreminderCollectionViewCell
+                
         return cell
     }
     
     override func didUpdate(to object: Any) {
-        self.model = object as! CurrentPreminder
+        self.model = object as! CreatePreminder
     }
     
     
@@ -56,17 +55,11 @@ class CurrentPreminderSectionController: ListSectionController {
     
 }
 
-class CurrentPreminder: NSObject, ListDiffable {
+class CreatePreminder: NSObject, ListDiffable {
     
-    public var title: String = ""
     
     override init() {
         super.init()
-    }
-    init(title: String) {
-        super.init()
-        
-        self.title = title
     }
     
     func diffIdentifier() -> NSObjectProtocol {
