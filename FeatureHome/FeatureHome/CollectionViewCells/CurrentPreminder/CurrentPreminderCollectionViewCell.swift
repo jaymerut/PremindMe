@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Core
 
 class CurrentPreminderCollectionViewCell: UICollectionViewCell {
     
@@ -16,6 +17,7 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
         var label = UILabel(frame: .zero)
         
         label.textAlignment = .left
+        label.font = Fonts.andikaNewBasicRegular.size(16.0)
         
         return label
     }()
@@ -25,8 +27,7 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
         button.addTarget(self, action: #selector(buttonEdit_TouchUpInside), for: .touchUpInside)
         button.layer.cornerRadius = 5.0
         button.backgroundColor = UIColor(rgb: 0x808080)
-        button.setTitle("Edit", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
+        button.setImage(UIImage(named: "edit", in: Core.Environment.bundle(), with: nil), for: .normal)
         
         return button
     }()
@@ -36,8 +37,7 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
         button.addTarget(self, action: #selector(buttonCancel_TouchUpInside), for: .touchUpInside)
         button.layer.cornerRadius = 5.0
         button.backgroundColor = UIColor(rgb: 0xD70040)
-        button.setTitle("Cancel", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
+        button.setImage(UIImage(named: "cancel", in: Core.Environment.bundle(), with: nil), for: .normal)
         
         return button
     }()
@@ -70,14 +70,14 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
             make.right.equalTo(self.contentView.snp.right).inset(20)
             make.centerY.equalTo(self.contentView.snp.centerY)
             make.height.equalTo(30)
-            make.width.equalTo(80)
+            make.width.equalTo(40)
         }
         self.contentView.addSubview(self.buttonEdit)
         self.buttonEdit.snp.makeConstraints { make in
             make.right.equalTo(self.buttonCancel.snp.left).offset(-10)
             make.centerY.equalTo(self.contentView.snp.centerY)
             make.height.equalTo(30)
-            make.width.equalTo(60)
+            make.width.equalTo(40)
         }
         self.contentView.addSubview(self.labelTitle)
         self.labelTitle.snp.makeConstraints { make in

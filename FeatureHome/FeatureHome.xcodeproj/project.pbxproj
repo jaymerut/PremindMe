@@ -12,8 +12,6 @@
 		969057182807C5AF00E5A1E7 /* FeatureHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969057172807C5AF00E5A1E7 /* FeatureHomeTests.swift */; };
 		969057192807C5AF00E5A1E7 /* FeatureHome.h in Headers */ = {isa = PBXBuildFile; fileRef = 9690570B2807C5AF00E5A1E7 /* FeatureHome.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		969057302807C73500E5A1E7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9690572F2807C73500E5A1E7 /* HomeViewController.swift */; };
-		969057412807D4EB00E5A1E7 /* HeaderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969057402807D4EB00E5A1E7 /* HeaderSectionController.swift */; };
-		969057452807D59300E5A1E7 /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969057442807D59300E5A1E7 /* HeaderCollectionViewCell.swift */; };
 		96DAA46D28139F9D0096B740 /* CurrentPremindersSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA46C28139F9D0096B740 /* CurrentPremindersSectionController.swift */; };
 		96DAA47028139FC50096B740 /* CurrentPreminderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA46F28139FC50096B740 /* CurrentPreminderCollectionViewCell.swift */; };
 		96DAA4782813A79F0096B740 /* CurrentPreminderContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA4772813A79F0096B740 /* CurrentPreminderContainerCollectionViewCell.swift */; };
@@ -21,6 +19,7 @@
 		96DAA48A2813B43B0096B740 /* Core.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 96DAA4862813B1E30096B740 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		96DAA4902814F32F0096B740 /* CreatePreminderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA48F2814F32F0096B740 /* CreatePreminderSectionController.swift */; };
 		96DAA4932814F3D00096B740 /* CreatePreminderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA4922814F3D00096B740 /* CreatePreminderCollectionViewCell.swift */; };
+		96DAA4AB281504560096B740 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA4AA281504560096B740 /* Environment.swift */; };
 		B37F6967A846E3C4206B2342 /* Pods_FeatureHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696189F87762B5DC9A30EB20 /* Pods_FeatureHome.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,8 +70,6 @@
 		969057122807C5AF00E5A1E7 /* FeatureHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeatureHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		969057172807C5AF00E5A1E7 /* FeatureHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureHomeTests.swift; sourceTree = "<group>"; };
 		9690572F2807C73500E5A1E7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		969057402807D4EB00E5A1E7 /* HeaderSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionController.swift; sourceTree = "<group>"; };
-		969057442807D59300E5A1E7 /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		96DAA46C28139F9D0096B740 /* CurrentPremindersSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPremindersSectionController.swift; sourceTree = "<group>"; };
 		96DAA46F28139FC50096B740 /* CurrentPreminderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPreminderCollectionViewCell.swift; sourceTree = "<group>"; };
 		96DAA4772813A79F0096B740 /* CurrentPreminderContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPreminderContainerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -80,6 +77,7 @@
 		96DAA4802813B1E30096B740 /* Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Core.xcodeproj; path = ../../../Core/Core.xcodeproj; sourceTree = "<group>"; };
 		96DAA48F2814F32F0096B740 /* CreatePreminderSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePreminderSectionController.swift; sourceTree = "<group>"; };
 		96DAA4922814F3D00096B740 /* CreatePreminderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePreminderCollectionViewCell.swift; sourceTree = "<group>"; };
+		96DAA4AA281504560096B740 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		D118AE96E05BB7AAA1A85E39 /* Pods-FeatureHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeatureHome.release.xcconfig"; path = "Target Support Files/Pods-FeatureHome/Pods-FeatureHome.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +148,7 @@
 				9690572E2807C72300E5A1E7 /* ViewControllers */,
 				9690570B2807C5AF00E5A1E7 /* FeatureHome.h */,
 				9690570C2807C5AF00E5A1E7 /* FeatureHome.docc */,
+				96DAA4AA281504560096B740 /* Environment.swift */,
 			);
 			path = FeatureHome;
 			sourceTree = "<group>";
@@ -176,7 +175,6 @@
 				96DAA48C2814F3150096B740 /* CreatePreminder */,
 				96DAA4752813A7770096B740 /* CurrentPreminderContainer */,
 				96DAA46B28139F6B0096B740 /* CurrentPreminder */,
-				969057422807D57400E5A1E7 /* Header */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -187,25 +185,8 @@
 				96DAA4912814F3BD0096B740 /* CreatePreminder */,
 				96DAA4762813A7800096B740 /* CurrentPreminderContainer */,
 				96DAA46E28139FA30096B740 /* CurrentPreminder */,
-				969057432807D57F00E5A1E7 /* Header */,
 			);
 			path = CollectionViewCells;
-			sourceTree = "<group>";
-		};
-		969057422807D57400E5A1E7 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				969057402807D4EB00E5A1E7 /* HeaderSectionController.swift */,
-			);
-			path = Header;
-			sourceTree = "<group>";
-		};
-		969057432807D57F00E5A1E7 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				969057442807D59300E5A1E7 /* HeaderCollectionViewCell.swift */,
-			);
-			path = Header;
 			sourceTree = "<group>";
 		};
 		96DAA46B28139F6B0096B740 /* CurrentPreminder */ = {
@@ -433,11 +414,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				96DAA47A2813A7B90096B740 /* CurrentPreminderContainerSectionController.swift in Sources */,
-				969057412807D4EB00E5A1E7 /* HeaderSectionController.swift in Sources */,
 				96DAA47028139FC50096B740 /* CurrentPreminderCollectionViewCell.swift in Sources */,
-				969057452807D59300E5A1E7 /* HeaderCollectionViewCell.swift in Sources */,
 				96DAA4902814F32F0096B740 /* CreatePreminderSectionController.swift in Sources */,
 				9690570D2807C5AF00E5A1E7 /* FeatureHome.docc in Sources */,
+				96DAA4AB281504560096B740 /* Environment.swift in Sources */,
 				969057302807C73500E5A1E7 /* HomeViewController.swift in Sources */,
 				96DAA4932814F3D00096B740 /* CreatePreminderCollectionViewCell.swift in Sources */,
 				96DAA46D28139F9D0096B740 /* CurrentPremindersSectionController.swift in Sources */,
