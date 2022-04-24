@@ -88,7 +88,7 @@ public class HomeViewController: UIViewController {
         // CollectionView
         self.view.addSubview(self.collectionView)
         self.collectionView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view.snp.top).offset(10)
+            make.top.equalTo(self.view.snp.top).offset(50)
             make.left.equalTo(self.view.snp.left).offset(20)
             make.right.equalTo(self.view.snp.right).inset(20)
             make.bottom.equalTo(self.view.snp.bottom).offset(-10)
@@ -99,7 +99,7 @@ public class HomeViewController: UIViewController {
         var array = [Any]()
         let currentPreminders = [CurrentPreminder.init(title: "Remind Me Now 1!! Remind Me Now 1!! Remind Me Now 1!! Remind Me Now 1!! "), CurrentPreminder.init(title: "Remind Me Now 2!!")]
         
-        array.append(CurrentPreminderContainer())
+        array.append(CurrentPreminderContainer(currentPreminders: currentPreminders))
         array.append(CreatePreminder())
         
         return array
@@ -120,9 +120,7 @@ extension HomeViewController: ListAdapterDataSource {
     
     public func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         
-        if object is Header {
-            return HeaderSectionController()
-        } else if object is CurrentPreminderContainer {
+        if object is CurrentPreminderContainer {
             return CurrentPreminderContainerSectionController()
         } else if object is CreatePreminder {
             return CreatePreminderSectionController()

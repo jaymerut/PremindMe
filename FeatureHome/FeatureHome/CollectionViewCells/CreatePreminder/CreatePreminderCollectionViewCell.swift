@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Core
 
 class CreatePreminderCollectionViewCell: UICollectionViewCell {
     
@@ -20,6 +20,7 @@ class CreatePreminderCollectionViewCell: UICollectionViewCell {
         button.backgroundColor = UIColor(rgb: 0x50C878)
         button.setTitle("Create Preminder", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
+        button.titleLabel?.font = Fonts.andikaNewBasicBold.size(18.0)
         
         return button
     }()

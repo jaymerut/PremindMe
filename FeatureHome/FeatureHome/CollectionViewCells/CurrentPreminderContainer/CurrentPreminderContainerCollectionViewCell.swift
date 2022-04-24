@@ -39,6 +39,7 @@ class CurrentPreminderContainerCollectionViewCell: UICollectionViewCell {
         label.textAlignment = .center
         label.textColor = UIColor.white
         label.text = "Current Preminders"
+        label.font = Fonts.andikaNewBasicBold.size(18.0)
         
         return label
     }()

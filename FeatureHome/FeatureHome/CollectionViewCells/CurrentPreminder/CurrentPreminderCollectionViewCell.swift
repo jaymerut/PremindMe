@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Core
 
 class CurrentPreminderCollectionViewCell: UICollectionViewCell {
     
@@ -16,6 +17,7 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
         var label = UILabel(frame: .zero)
         
         label.textAlignment = .left
+        label.font = Fonts.andikaNewBasicRegular.size(16.0)
         
         return label
     }()
@@ -27,6 +29,7 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
         button.backgroundColor = UIColor(rgb: 0x808080)
         button.setTitle("Edit", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
+        button.titleLabel?.font = Fonts.andikaNewBasicRegular.size(16.0)
         
         return button
     }()
@@ -38,6 +41,7 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
         button.backgroundColor = UIColor(rgb: 0xD70040)
         button.setTitle("Cancel", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
+        button.titleLabel?.font = Fonts.andikaNewBasicRegular.size(16.0)
         
         return button
     }()

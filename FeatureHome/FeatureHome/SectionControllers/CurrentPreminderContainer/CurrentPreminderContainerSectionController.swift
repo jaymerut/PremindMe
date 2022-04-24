@@ -8,6 +8,7 @@
 import UIKit
 import IGListKit
 import IGListDiffKit
+import Core
 
 class CurrentPreminderContainerSectionController: ListSectionController {
     
@@ -82,7 +83,7 @@ extension CurrentPreminderContainerSectionController: ListAdapterDataSource {
         let label = UILabel.init(frame: .zero)
         label.text = "No Preminders Set"
         label.textAlignment = .center
-        label.font = UIFont.italicSystemFont(ofSize: 16.0)
+        label.font = Fonts.andikaNewBasicRegular.size(14.0)
         
         return label
     }
