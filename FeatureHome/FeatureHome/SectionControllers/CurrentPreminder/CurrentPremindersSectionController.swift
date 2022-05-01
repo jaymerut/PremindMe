@@ -9,6 +9,10 @@ import UIKit
 import IGListKit
 import IGListDiffKit
 
+protocol CurrentPreminderDelegate {
+    func cancelPreminder() -> Void
+}
+
 class CurrentPreminderSectionController: ListSectionController {
     
     
@@ -59,14 +63,16 @@ class CurrentPreminderSectionController: ListSectionController {
 class CurrentPreminder: NSObject, ListDiffable {
     
     public var title: String = ""
+    public var delegate: CurrentPreminderDelegate? = nil
     
     override init() {
         super.init()
     }
-    init(title: String) {
+    init(title: String, delegate: CurrentPreminderDelegate) {
         super.init()
         
         self.title = title
+        self.delegate = delegate
     }
     
     func diffIdentifier() -> NSObjectProtocol {

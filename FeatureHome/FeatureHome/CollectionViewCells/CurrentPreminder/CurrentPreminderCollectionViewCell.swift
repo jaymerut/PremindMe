@@ -13,6 +13,8 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
     
     
     // MARK: - Variables
+    private var model: CurrentPreminder = CurrentPreminder()
+    
     private lazy var labelTitle: UILabel = {
         var label = UILabel(frame: .zero)
         
@@ -27,7 +29,7 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
         button.addTarget(self, action: #selector(buttonEdit_TouchUpInside), for: .touchUpInside)
         button.layer.cornerRadius = 5.0
         button.backgroundColor = UIColor(rgb: 0x808080)
-        button.setImage(UIImage(named: "edit", in: Core.Environment.bundle(), with: nil), for: .normal)
+        button.setImage(UIImage(named: "edit", in: Core.Module.bundle(), with: nil), for: .normal)
         
         return button
     }()
@@ -37,7 +39,7 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
         button.addTarget(self, action: #selector(buttonCancel_TouchUpInside), for: .touchUpInside)
         button.layer.cornerRadius = 5.0
         button.backgroundColor = UIColor(rgb: 0xD70040)
-        button.setImage(UIImage(named: "cancel", in: Core.Environment.bundle(), with: nil), for: .normal)
+        button.setImage(UIImage(named: "cancel", in: Core.Module.bundle(), with: nil), for: .normal)
         
         return button
     }()
@@ -85,8 +87,6 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
             make.right.equalTo(self.buttonEdit.snp.left).offset(-10)
             make.centerY.equalTo(self.contentView.snp.centerY)
         }
-        
-        
     }
     
     // MARK: UIResponders
@@ -95,13 +95,15 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
     }
     
     @objc private func buttonCancel_TouchUpInside() {
-        
+        self.model.delegate?.cancelPreminder()
     }
     
     
     // MARK: - Public API
     public func updateCell(model: CurrentPreminder) {
-        self.labelTitle.text = model.title
+        self.model = model
+        
+        self.labelTitle.text = self.model.title
     }
     
     

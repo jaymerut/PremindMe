@@ -19,8 +19,8 @@
 		96DAA4A02814FE8B0096B740 /* AndikaNewBasic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96DAA49C2814FE8B0096B740 /* AndikaNewBasic-Regular.ttf */; };
 		96DAA4A22814FF7D0096B740 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA4A12814FF7D0096B740 /* UIFont+Extensions.swift */; };
 		96DAA4A42814FFCD0096B740 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA4A32814FFCD0096B740 /* Fonts.swift */; };
-		96DAA4A62815019B0096B740 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA4A52815019B0096B740 /* Environment.swift */; };
 		96DAA4B9281508830096B740 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96DAA4B8281508830096B740 /* Images.xcassets */; };
+		96DAA4CF2815BC5F0096B740 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAA4CE2815BC5F0096B740 /* Module.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +48,8 @@
 		96DAA49C2814FE8B0096B740 /* AndikaNewBasic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AndikaNewBasic-Regular.ttf"; sourceTree = "<group>"; };
 		96DAA4A12814FF7D0096B740 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		96DAA4A32814FFCD0096B740 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		96DAA4A52815019B0096B740 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		96DAA4B8281508830096B740 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		96DAA4CE2815BC5F0096B740 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		9F732D113DDE9CD2E19C258D /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,12 +106,12 @@
 		969056A82807C1E600E5A1E7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				96DAA4CD2815BC550096B740 /* Module */,
 				96DAA4AE2815058F0096B740 /* Images */,
 				96DAA4982814FE5B0096B740 /* Fonts */,
 				96DAA47B2813B0FA0096B740 /* Extensions */,
 				969056A92807C1E600E5A1E7 /* Core.h */,
 				969056AA2807C1E600E5A1E7 /* Core.docc */,
-				96DAA4A52815019B0096B740 /* Environment.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -151,6 +151,14 @@
 				96DAA4B8281508830096B740 /* Images.xcassets */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		96DAA4CD2815BC550096B740 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				96DAA4CE2815BC5F0096B740 /* Module.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 		BA74AC675C8D0B225FF0D1FA /* Frameworks */ = {
@@ -302,10 +310,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				96DAA4A42814FFCD0096B740 /* Fonts.swift in Sources */,
-				96DAA4A62815019B0096B740 /* Environment.swift in Sources */,
 				969056AB2807C1E600E5A1E7 /* Core.docc in Sources */,
 				96DAA4A22814FF7D0096B740 /* UIFont+Extensions.swift in Sources */,
 				96DAA47D2813B1270096B740 /* UIColor+Extensions.swift in Sources */,
+				96DAA4CF2815BC5F0096B740 /* Module.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

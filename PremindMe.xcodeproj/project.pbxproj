@@ -17,6 +17,8 @@
 		969056612807BBAA00E5A1E7 /* PremindMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969056602807BBAA00E5A1E7 /* PremindMeUITestsLaunchTests.swift */; };
 		969056CB2807C3C700E5A1E7 /* Core.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 969056C72807C38400E5A1E7 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9690572D2807C5F900E5A1E7 /* FeatureHome.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 9690572A2807C5EC00E5A1E7 /* FeatureHome.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		96A97C55281E38B4001EA84F /* PremindMeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A97C54281E38B4001EA84F /* PremindMeFlowCoordinator.swift */; };
+		96A97C57281E395C001EA84F /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A97C56281E395C001EA84F /* DIContainer.swift */; };
 		97656D09048B22C4AB010BA4 /* Pods_PremindMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360576A1F15B63284A16393D /* Pods_PremindMeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +99,8 @@
 		969056602807BBAA00E5A1E7 /* PremindMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremindMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		969056C12807C38400E5A1E7 /* Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Core.xcodeproj; path = Core/Core.xcodeproj; sourceTree = SOURCE_ROOT; };
 		969057222807C5EC00E5A1E7 /* FeatureHome.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FeatureHome.xcodeproj; path = FeatureHome/FeatureHome.xcodeproj; sourceTree = SOURCE_ROOT; };
+		96A97C54281E38B4001EA84F /* PremindMeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremindMeFlowCoordinator.swift; sourceTree = "<group>"; };
+		96A97C56281E395C001EA84F /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		A0CC801B47F38A2BC3BBE319 /* Pods-PremindMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PremindMe.debug.xcconfig"; path = "Target Support Files/Pods-PremindMe/Pods-PremindMe.debug.xcconfig"; sourceTree = "<group>"; };
 		BDFFC69965C9E1016FC79F69 /* Pods-PremindMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PremindMeTests.debug.xcconfig"; path = "Target Support Files/Pods-PremindMeTests/Pods-PremindMeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C20A13C8EC94418B9C31E71C /* Pods-PremindMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PremindMe.release.xcconfig"; path = "Target Support Files/Pods-PremindMe/Pods-PremindMe.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,7 +139,7 @@
 		969056312807BBA600E5A1E7 = {
 			isa = PBXGroup;
 			children = (
-				969056C02807C34800E5A1E7 /* Dependencies */,
+				96A97C58281E3C85001EA84F /* Dependencies */,
 				9690563C2807BBA600E5A1E7 /* PremindMe */,
 				969056532807BBAA00E5A1E7 /* PremindMeTests */,
 				9690565D2807BBAA00E5A1E7 /* PremindMeUITests */,
@@ -158,6 +162,7 @@
 		9690563C2807BBA600E5A1E7 /* PremindMe */ = {
 			isa = PBXGroup;
 			children = (
+				96A97C4E281E3888001EA84F /* Module */,
 				9690566E2807BD3700E5A1E7 /* AppDelegate */,
 				9690566D2807BCCB00E5A1E7 /* Resources */,
 			);
@@ -199,15 +204,6 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		969056C02807C34800E5A1E7 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				969057222807C5EC00E5A1E7 /* FeatureHome.xcodeproj */,
-				969056C12807C38400E5A1E7 /* Core.xcodeproj */,
-			);
-			path = Dependencies;
-			sourceTree = "<group>";
-		};
 		969056C22807C38400E5A1E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +220,33 @@
 				9690572C2807C5EC00E5A1E7 /* FeatureHomeTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		96A97C4E281E3888001EA84F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				96A97C53281E388F001EA84F /* Flow */,
+				96A97C56281E395C001EA84F /* DIContainer.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		96A97C53281E388F001EA84F /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				96A97C54281E38B4001EA84F /* PremindMeFlowCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		96A97C58281E3C85001EA84F /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				969057222807C5EC00E5A1E7 /* FeatureHome.xcodeproj */,
+				969056C12807C38400E5A1E7 /* Core.xcodeproj */,
+			);
+			name = Dependencies;
+			path = PremindMe/Dependencies;
 			sourceTree = "<group>";
 		};
 		A6E0BF0119D60961676F0547 /* Frameworks */ = {
@@ -529,6 +552,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A97C55281E38B4001EA84F /* PremindMeFlowCoordinator.swift in Sources */,
+				96A97C57281E395C001EA84F /* DIContainer.swift in Sources */,
 				9690563E2807BBA600E5A1E7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

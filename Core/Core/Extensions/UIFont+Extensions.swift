@@ -8,7 +8,7 @@
 import UIKit
 
 public extension Fonts {
-    static func install(from bundles: [Bundle] = [ Environment.bundle() ] ) {
+    static func install(from bundles: [Bundle] = [ Module.bundle() ] ) {
         Fonts.installed = true
         for each in Fonts.allCases {
             for bundle in bundles {
