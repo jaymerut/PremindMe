@@ -11,22 +11,35 @@ import FeatureHome
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let diContainer = DIContainer()
+    var premindMeFlowCoordinator: PremindMeFlowCoordinator?
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let navigationController = UINavigationController()
+
+        window?.rootViewController = navigationController
+        premindMeFlowCoordinator = PremindMeFlowCoordinator(navigationController: navigationController,
+                                                        diContainer: diContainer)
+        /*
         let homeTabBarItem = UITabBarItem()
         homeTabBarItem.title = "Home"
         
-        let homeVC = HomeViewController()
-        homeVC.tabBarItem = homeTabBarItem
+        let homeModule = Module.init(dependencies: ModuleDependencies())
+        let homeNC = UINavigationController.init()
+        homeModule.createHomeUI(in: homeNC)
+        
+        homeNC.tabBarItem = homeTabBarItem
         
         let tabBarVC = UITabBarController()
-        tabBarVC.viewControllers = [homeVC]
+        tabBarVC.viewControllers = [homeNC]
         
-        tabBarVC.selectedViewController = homeVC
+        tabBarVC.selectedViewController = homeNC
+         */
         
         window = UIWindow()
-        window?.rootViewController = tabBarVC
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     
         return true

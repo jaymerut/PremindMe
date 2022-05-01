@@ -27,7 +27,7 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
         button.addTarget(self, action: #selector(buttonEdit_TouchUpInside), for: .touchUpInside)
         button.layer.cornerRadius = 5.0
         button.backgroundColor = UIColor(rgb: 0x808080)
-        button.setImage(UIImage(named: "edit", in: Core.Environment.bundle(), with: nil), for: .normal)
+        button.setImage(UIImage(named: "edit", in: Core.Module.bundle(), with: nil), for: .normal)
         
         return button
     }()
@@ -37,7 +37,7 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
         button.addTarget(self, action: #selector(buttonCancel_TouchUpInside), for: .touchUpInside)
         button.layer.cornerRadius = 5.0
         button.backgroundColor = UIColor(rgb: 0xD70040)
-        button.setImage(UIImage(named: "cancel", in: Core.Environment.bundle(), with: nil), for: .normal)
+        button.setImage(UIImage(named: "cancel", in: Core.Module.bundle(), with: nil), for: .normal)
         
         return button
     }()
