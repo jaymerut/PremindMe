@@ -139,7 +139,7 @@
 		969056312807BBA600E5A1E7 = {
 			isa = PBXGroup;
 			children = (
-				969056C02807C34800E5A1E7 /* Dependencies */,
+				96A97C58281E3C85001EA84F /* Dependencies */,
 				9690563C2807BBA600E5A1E7 /* PremindMe */,
 				969056532807BBAA00E5A1E7 /* PremindMeTests */,
 				9690565D2807BBAA00E5A1E7 /* PremindMeUITests */,
@@ -204,15 +204,6 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		969056C02807C34800E5A1E7 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				969057222807C5EC00E5A1E7 /* FeatureHome.xcodeproj */,
-				969056C12807C38400E5A1E7 /* Core.xcodeproj */,
-			);
-			path = Dependencies;
-			sourceTree = "<group>";
-		};
 		969056C22807C38400E5A1E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +237,16 @@
 				96A97C54281E38B4001EA84F /* PremindMeFlowCoordinator.swift */,
 			);
 			path = Flow;
+			sourceTree = "<group>";
+		};
+		96A97C58281E3C85001EA84F /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				969057222807C5EC00E5A1E7 /* FeatureHome.xcodeproj */,
+				969056C12807C38400E5A1E7 /* Core.xcodeproj */,
+			);
+			name = Dependencies;
+			path = PremindMe/Dependencies;
 			sourceTree = "<group>";
 		};
 		A6E0BF0119D60961676F0547 /* Frameworks */ = {

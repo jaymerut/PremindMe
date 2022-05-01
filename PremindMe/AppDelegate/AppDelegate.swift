@@ -38,8 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarVC.selectedViewController = homeNC
          */
         
-        window = UIWindow()
+        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
+        premindMeFlowCoordinator?.start()
         window?.makeKeyAndVisible()
     
         return true
