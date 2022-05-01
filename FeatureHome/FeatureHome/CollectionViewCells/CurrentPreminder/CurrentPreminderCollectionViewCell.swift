@@ -13,6 +13,8 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
     
     
     // MARK: - Variables
+    private var model: CurrentPreminder = CurrentPreminder()
+    
     private lazy var labelTitle: UILabel = {
         var label = UILabel(frame: .zero)
         
@@ -85,8 +87,6 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
             make.right.equalTo(self.buttonEdit.snp.left).offset(-10)
             make.centerY.equalTo(self.contentView.snp.centerY)
         }
-        
-        
     }
     
     // MARK: UIResponders
@@ -95,13 +95,15 @@ class CurrentPreminderCollectionViewCell: UICollectionViewCell {
     }
     
     @objc private func buttonCancel_TouchUpInside() {
-        
+        self.model.delegate?.cancelPreminder()
     }
     
     
     // MARK: - Public API
     public func updateCell(model: CurrentPreminder) {
-        self.labelTitle.text = model.title
+        self.model = model
+        
+        self.labelTitle.text = self.model.title
     }
     
     
